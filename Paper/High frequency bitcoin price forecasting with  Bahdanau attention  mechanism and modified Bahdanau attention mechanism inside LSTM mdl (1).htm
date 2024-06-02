@@ -1,0 +1,2318 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 15">
+<meta name=Originator content="Microsoft Word 15">
+<link rel=File-List
+href="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/filelist.xml">
+<link rel=Edit-Time-Data
+href="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Margarita Prikhodko</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Margarita Prikhodko</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>46</o:TotalTime>
+  <o:Created>2024-06-02T23:04:00Z</o:Created>
+  <o:LastSaved>2024-06-02T23:04:00Z</o:LastSaved>
+  <o:Pages>6</o:Pages>
+  <o:Words>1528</o:Words>
+  <o:Characters>8715</o:Characters>
+  <o:Lines>72</o:Lines>
+  <o:Paragraphs>20</o:Paragraphs>
+  <o:CharactersWithSpaces>10223</o:CharactersWithSpaces>
+  <o:Version>16.00</o:Version>
+ </o:DocumentProperties>
+ <o:CustomDocumentProperties>
+  <o:ContentTypeId dt:dt="string">0x010100FA68AA7AC838F64EA48F3280B0070DB1</o:ContentTypeId>
+ </o:CustomDocumentProperties>
+</xml><![endif]-->
+<link rel=dataStoreItem
+href="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/item0001.xml"
+target="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/props002.xml">
+<link rel=dataStoreItem
+href="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/item0003.xml"
+target="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/props004.xml">
+<link rel=dataStoreItem
+href="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/item0005.xml"
+target="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/props006.xml">
+<link rel=themeData
+href="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/themedata.thmx">
+<link rel=colorSchemeMapping
+href="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <w:DoNotOptimizeForBrowser/>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" DefPriority="99"
+  LatentStyleCount="376">
+  <w:LsdException Locked="false" Priority="0" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" Priority="9" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" Priority="9" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index 9"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 1"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 2"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 3"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 4"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 5"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 6"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 7"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 8"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" Name="toc 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="header"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footer"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="index heading"/>
+  <w:LsdException Locked="false" Priority="35" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of figures"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="envelope return"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="footnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="line number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="page number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote reference"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="endnote text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="table of authorities"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="macro"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="toa heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Bullet 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Number 5"/>
+  <w:LsdException Locked="false" Priority="10" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Closing"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Signature"/>
+  <w:LsdException Locked="false" Priority="1" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="List Continue 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Message Header"/>
+  <w:LsdException Locked="false" Priority="11" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Salutation"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Date"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text First Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Note Heading"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Body Text Indent 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Block Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="FollowedHyperlink"/>
+  <w:LsdException Locked="false" Priority="22" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" Priority="20" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Document Map"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Plain Text"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="E-mail Signature"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Top of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Bottom of Form"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal (Web)"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Acronym"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Address"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Cite"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Code"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Definition"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Keyboard"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Preformatted"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Sample"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Typewriter"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="HTML Variable"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Normal Table"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="annotation subject"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="No List"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Outline List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Simple 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Classic 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Colorful 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Columns 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Grid 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 4"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table List 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table 3D effects 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Contemporary"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Elegant"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Professional"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Subtle 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Web 3"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Balloon Text"/>
+  <w:LsdException Locked="false" Priority="39" Name="Table Grid"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Table Theme"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+  <w:LsdException Locked="false" Priority="41" Name="Plain Table 1"/>
+  <w:LsdException Locked="false" Priority="42" Name="Plain Table 2"/>
+  <w:LsdException Locked="false" Priority="43" Name="Plain Table 3"/>
+  <w:LsdException Locked="false" Priority="44" Name="Plain Table 4"/>
+  <w:LsdException Locked="false" Priority="45" Name="Plain Table 5"/>
+  <w:LsdException Locked="false" Priority="40" Name="Grid Table Light"/>
+  <w:LsdException Locked="false" Priority="46" Name="Grid Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="Grid Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="Grid Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="Grid Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="Grid Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="Grid Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="Grid Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="Grid Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="Grid Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="Grid Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="46" Name="List Table 1 Light"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark"/>
+  <w:LsdException Locked="false" Priority="51" Name="List Table 6 Colorful"/>
+  <w:LsdException Locked="false" Priority="52" Name="List Table 7 Colorful"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 1"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 1"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 1"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 1"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 2"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 2"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 2"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 2"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 3"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 3"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 3"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 3"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 4"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 4"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 4"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 4"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 5"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 5"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 5"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 5"/>
+  <w:LsdException Locked="false" Priority="46"
+   Name="List Table 1 Light Accent 6"/>
+  <w:LsdException Locked="false" Priority="47" Name="List Table 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="48" Name="List Table 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="49" Name="List Table 4 Accent 6"/>
+  <w:LsdException Locked="false" Priority="50" Name="List Table 5 Dark Accent 6"/>
+  <w:LsdException Locked="false" Priority="51"
+   Name="List Table 6 Colorful Accent 6"/>
+  <w:LsdException Locked="false" Priority="52"
+   Name="List Table 7 Colorful Accent 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Hyperlink"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Hashtag"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Unresolved Mention"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   Name="Smart Link"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:-536869121 1107305727 33554432 0 415 0;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-469750017 -1040178053 9 0 511 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+h1
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	line-height:107%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;
+	font-weight:normal;}
+h2
+	{mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";}
+h4
+	{mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 4 Char";
+	mso-style-next:Normal;
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	line-height:107%;
+	mso-pagination:widow-orphan lines-together;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:11.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;
+	font-weight:normal;
+	font-style:italic;}
+a:link, span.MsoHyperlink
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-noshow:yes;
+	mso-style-priority:99;
+	color:#954F72;
+	mso-themecolor:followedhyperlink;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{mso-style-priority:34;
+	mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-type:export-only;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:.5in;
+	mso-add-space:auto;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:18.0pt;
+	mso-bidi-font-size:18.0pt;
+	font-family:"Times New Roman",serif;
+	mso-ascii-font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-hansi-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:0pt;
+	mso-ligatures:none;
+	font-weight:bold;}
+p.html-x, li.html-x, div.html-x
+	{mso-style-name:html-x;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";}
+span.html-italic
+	{mso-style-name:html-italic;
+	mso-style-unhide:no;}
+p.html-xx, li.html-xx, div.html-xx
+	{mso-style-name:html-xx;
+	mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	mso-fareast-font-family:"Times New Roman";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:16.0pt;
+	mso-bidi-font-size:16.0pt;
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-noshow:yes;
+	mso-style-priority:9;
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 4";
+	font-family:"Calibri Light",sans-serif;
+	mso-ascii-font-family:"Calibri Light";
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:"Calibri Light";
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#2F5496;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-style:italic;}
+span.label
+	{mso-style-name:label;
+	mso-style-unhide:no;}
+span.inlineblock
+	{mso-style-name:inlineblock;
+	mso-style-unhide:no;}
+span.sciprofiles-linkname
+	{mso-style-name:sciprofiles-link__name;
+	mso-style-unhide:no;}
+span.mi
+	{mso-style-name:mi;
+	mso-style-unhide:no;}
+span.mjxassistivemathml
+	{mso-style-name:mjx_assistive_mathml;
+	mso-style-unhide:no;}
+span.mo
+	{mso-style-name:mo;
+	mso-style-unhide:no;}
+span.mn
+	{mso-style-name:mn;
+	mso-style-unhide:no;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-fareast-font-family:Calibri;
+	mso-fareast-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:8.0pt;
+	line-height:107%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:182475279;
+	mso-list-template-ids:-1896564624;}
+@list l1
+	{mso-list-id:1200776285;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-986828968 67698703 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l1:level1
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level3
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l1:level4
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l1:level7
+	{mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-number-format:roman-lower;
+	mso-level-tab-stop:none;
+	mso-level-number-position:right;
+	text-indent:-9.0pt;}
+@list l2
+	{mso-list-id:1910579600;
+	mso-list-template-ids:2114645014;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin-top:0in;
+	mso-para-margin-right:0in;
+	mso-para-margin-bottom:8.0pt;
+	mso-para-margin-left:0in;
+	line-height:107%;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+table.MsoTableGrid
+	{mso-style-name:"Table Grid";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-priority:39;
+	mso-style-unhide:no;
+	border:solid windowtext 1.0pt;
+	mso-border-alt:solid windowtext .5pt;
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-border-insideh:.5pt solid windowtext;
+	mso-border-insidev:.5pt solid windowtext;
+	mso-para-margin:0in;
+	mso-pagination:widow-orphan;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ascii-font-family:Calibri;
+	mso-ascii-theme-font:minor-latin;
+	mso-hansi-font-family:Calibri;
+	mso-hansi-theme-font:minor-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:minor-bidi;
+	mso-font-kerning:1.0pt;
+	mso-ligatures:standardcontextual;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1026"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink="#954F72" style='tab-interval:.5in;word-wrap:
+break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Forecasting High-Frequency Bitcoin Prices
+Using <span class=SpellE>Bahdanau</span> Attention Mechanism within LSTM Model.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Introduction<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>High frequency trading was <span class=GramE>incredible</span>
+popular in the last 20 years. Unfortunately, it was impossible to create model
+to predict all possible price swings on stock market. However, some of high
+frequencies algorithms are used as supplement of investment strategy for most
+investment decision</span><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+mso-font-kerning:0pt;mso-ligatures:none'>[</span><a
+href="https://www.mdpi.com/2504-3110/7/2/203#B13-fractalfract-07-00203"><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";color:#4F5671;mso-font-kerning:0pt;
+mso-ligatures:none'>1</span></b></a><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif;mso-fareast-font-family:"Times New Roman";
+mso-font-kerning:0pt;mso-ligatures:none'>]</span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>This paper will consider possibility of Bitcoin <span
+class=GramE>pricing<span style='mso-spacerun:yes'>  </span>prediction</span>
+with usage <span class=SpellE>Bahdanau</span> (additive) attention mechanism
+and Modified <span class=SpellE>Bahdanau</span> (additive) attention. Modified
+Bahdanau attention mechanism was introduced and tested. I compared 3 algorithms
+without tanh function and sigmoid for bitcoin pricing. Paper has done research
+on Bitcoin prices on minutes interval. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:22.5pt;margin-right:0in;margin-bottom:
+7.5pt;margin-left:0in;line-height:normal;mso-outline-level:2'><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";color:black;mso-font-kerning:0pt;mso-ligatures:none'>2.
+Literature Review <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-indent:24.0pt;line-height:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";mso-font-kerning:0pt;mso-ligatures:
+none'>Financial data forecasting can be done with machine learning. In fact,
+numerous <span class=GramE>publication</span> showed advantage to use machine
+learning methods in comparison of traditional econometric methods.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-indent:24.0pt;line-height:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";mso-font-kerning:0pt;mso-ligatures:
+none'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-bottom:0in;text-indent:24.0pt;line-height:
+normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+mso-fareast-font-family:"Times New Roman";mso-font-kerning:0pt;mso-ligatures:
+none'>From this aspect, by training a machine learning model on historical
+cryptocurrency price data, it may be possible to predict future price movements
+with some degree of accuracy. Prior research has shown that machine learning
+based techniques have a number of advantages over traditional forecasting
+models, including the ability to give results that is nearly or exactly the
+same as the actual result while also improving the accuracy of the results [</span><a
+href="https://www.mdpi.com/2504-3110/7/2/203#B12-fractalfract-07-00203"><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";color:#4F5671;mso-font-kerning:0pt;mso-ligatures:none'>3</span></b></a><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";mso-font-kerning:0pt;mso-ligatures:none'>]. There are several
+different machine learning techniques that can be used for this purpose,
+including decision trees, support vector machines (SVM), and neural networks
+(NN). The authors of [</span><a
+href="https://www.mdpi.com/2504-3110/7/2/203#B13-fractalfract-07-00203"><b><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";color:#4F5671;mso-font-kerning:0pt;mso-ligatures:none'>4</span></b></a><span
+style='font-size:12.0pt;font-family:"Times New Roman",serif;mso-fareast-font-family:
+"Times New Roman";mso-font-kerning:0pt;mso-ligatures:none'>] reveal that
+inclusion of cryptocurrencies in multi-asset portfolios improves the
+effectiveness of the portfolio in different ways. First, it enhances the
+minimum variance of the portfolio <span class=GramE>and also</span> moves the
+efficient frontier into a better position. Furthermore, the standard deviation
+of the portfolio decreases, and the Sharpe ratio increases by including
+cryptocurrency assets into the portfolios.</span><b><span style='font-size:
+12.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></b></p>
+
+<h2 style='margin-top:22.5pt;margin-right:0in;margin-bottom:7.5pt;margin-left:
+0in;text-align:justify'><span style='font-size:12.0pt;color:black'>3. Materials
+and Methods<o:p></o:p></span></h2>
+
+<p class=MsoNormal style='text-align:justify;text-indent:24.0pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>In
+this section, I outline the procedures employed in the pre-processing and
+modeling phase of the study. Subsequently, a demonstration of the prediction
+plot results for a selection of cryptocurrencies is presented. Finally, I
+provide a comprehensive evaluation of the study’s performance and analysis.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:24.0pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>.<o:p></o:p></span></p>
+
+<h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+0in;text-align:justify'><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:black;font-style:normal'>3.1. Dataset</span></b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:black'><o:p></o:p></span></h4>
+
+<p class=MsoNormal style='text-align:justify;text-indent:24.0pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>In
+this study, we proposed a simple three-layer network architecture for each deep
+learning model, consisting of 200-neuron deep learning layers (LSTM). I used
+the dataset of 15 <span class=GramE>minutes[</span>1]. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:24.0pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>Dataset
+has open price, high price, close price, low price, volume and volume weighting
+<span class=GramE>adjusted(</span>VWAP)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:24.0pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify;text-indent:24.0pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=448
+ style='width:336.0pt;margin-left:5.65pt;border-collapse:collapse;mso-yfti-tbllook:
+ 1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:14.5pt'>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;mso-border-alt:
+  solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>&nbsp;<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>Open<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>High<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>Low<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>Close<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>Volume<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-left:
+  none;mso-border-top-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>VWAP<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:14.5pt'>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>id<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>&nbsp;<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>&nbsp;<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>&nbsp;<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>&nbsp;<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>&nbsp;<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>&nbsp;<o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:14.5pt'>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2017<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2022<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2015<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2017<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>447<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.202<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:14.5pt'>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>1<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2025<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2028<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2023<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2024<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>592<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2024<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:14.5pt'>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>2<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2019<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2021<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2017<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2021<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>470<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.202<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:14.5pt'>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>3<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2016<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.202<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2012<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2019<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>515<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2015<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;mso-yfti-lastrow:yes;height:14.5pt'>
+  <td width=64 style='width:48.0pt;border:solid windowtext 1.0pt;border-top:
+  none;mso-border-left-alt:solid windowtext .5pt;mso-border-bottom-alt:solid windowtext .5pt;
+  mso-border-right-alt:solid windowtext .5pt;background:white;padding:0in 5.4pt 0in 5.4pt;
+  height:14.5pt'>
+  <p class=MsoNormal align=center style='margin-bottom:0in;text-align:center;
+  line-height:normal'><b><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>4<o:p></o:p></span></b></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2016<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2019<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2007<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.201<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>682<o:p></o:p></span></p>
+  </td>
+  <td width=64 style='width:48.0pt;border-top:none;border-left:none;border-bottom:
+  solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;mso-border-bottom-alt:
+  solid windowtext .5pt;mso-border-right-alt:solid windowtext .5pt;background:
+  white;padding:0in 5.4pt 0in 5.4pt;height:14.5pt'>
+  <p class=MsoNormal align=right style='margin-bottom:0in;text-align:right;
+  line-height:normal'><span style='font-size:12.0pt;font-family:"Times New Roman",serif;
+  mso-fareast-font-family:"Times New Roman";color:#212121;mso-font-kerning:
+  0pt;mso-ligatures:none'>0.2012<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='text-align:justify;text-indent:24.0pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#374151'>I have implemented percentage change,
+and we can observe that the time series is negatively autocorrelated according
+to the Durbin-Watson test (resulting in a statistic of 2.8). Additionally, it exhibits
+stationarity based on the Kwiatkowski-Phillips-Schmidt-Shin test for a
+50-period forecast.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#374151'>I was using AIC test to define
+distribution: prices of bitcoin and volume are normally distributed.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#374151;mso-no-proof:yes'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1028" type="#_x0000_t75" alt="A group of graphs showing different sizes of data&#10;&#10;Description automatically generated with medium confidence"
+ style='width:281pt;height:244.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/image001.png"
+  o:title="A group of graphs showing different sizes of data&#10;&#10;Description automatically generated with medium confidence"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=375 height=326
+src="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/image002.gif"
+alt="A group of graphs showing different sizes of data&#10;&#10;Description automatically generated with medium confidence"
+v:shapes="_x0000_i1028"><![endif]></span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#374151'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#374151'>Fig.1 Normal distribution
+volume prices.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#374151'>Dataset has Open, High, Low, Close,
+Volume, WVAp data. <span class=GramE>Prices :Open</span>, Close, High, Low has
+the highest correlations (0.99). PCA analysis reveal that there are 3
+components to describe dataset.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#374151;mso-no-proof:yes'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" alt="A graph of a number of principal components&#10;&#10;Description automatically generated"
+ style='width:274.5pt;height:200.5pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/image003.png"
+  o:title="A graph of a number of principal components&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=366 height=267
+src="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/image004.gif"
+alt="A graph of a number of principal components&#10;&#10;Description automatically generated"
+v:shapes="_x0000_i1027"><![endif]></span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif;color:#374151'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:#374151'>Fig.2 PCA prices analysis</span></b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#374151'>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#374151'><o:p>&nbsp;</o:p></span></p>
+
+<h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+0in;text-align:justify'><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:black;font-style:normal'>3.2. Deep
+Leaning Algorithms</span></b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:black'><o:p></o:p></span></h4>
+
+<h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+0in;text-align:justify'><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:black'>3.2.1. Long Short-Term
+Memory—LSTM</span></b><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:black;font-style:normal'><o:p></o:p></span></b></h4>
+
+<p class=MsoNormal style='text-align:justify;text-indent:24.0pt'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>LSTM
+is an updated version of RNN. They are specifically designed to avoid long-term
+dependence problems, whilst solving the vanishing gradient problem with an
+added mechanism, for regulating information, allowing it to be retained for
+long periods of time [</span><a
+href="https://www.mdpi.com/2504-3110/7/2/203#B24-fractalfract-07-00203"><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+color:#4F5671;text-decoration:none;text-underline:none'>5</span></b></a><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>].
+In short, the LSTM architecture is made up of a number of memory blocks that
+are recurrently connected sub <span class=GramE>networks</span><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif;
+mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="_x0000_i1026" type="#_x0000_t75"
+ alt="Fractalfract 07 00203 g008 550" style='width:412.5pt;height:220.5pt;
+ visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/image005.jpg"
+  o:title="Fractalfract 07 00203 g008 550"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=550 height=294
+src="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/image005.jpg"
+alt="Fractalfract 07 00203 g008 550" v:shapes="_x0000_i1026"><![endif]></span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='text-align:justify'><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>Figure 3.</span></b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>&nbsp;The
+structure of a long short-term memory (LSTM) algorithm.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'><span style='mso-spacerun:yes'> </span>4. 1
+Results and discussions.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span class=GramE><b><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'>4.1.1<span
+style='mso-spacerun:yes'>  </span>Bitcoin</span></b></span><b><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>
+prices are normally distributed. <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>It is possible to issue options on bitcoin. This <span
+class=GramE>lead</span> to multiple crypto derivatives exchange. <span
+style='mso-spacerun:yes'> </span>Bitcoin prices are stationary. It leads <span
+class=GramE>to<span style='mso-spacerun:yes'>  </span>approach</span> <span
+style='mso-spacerun:yes'> </span>Different models including ARIMA have been
+tested.<o:p></o:p></span></p>
+
+<h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+0in;text-align:justify'><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif;color:black;font-style:normal'>4.1.2
+Hypothesis<o:p></o:p></span></b></h4>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>I am going to test several <span class=GramE>hypothesis</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>Bitcoin Time series are not stationary for period
+&gt;8000 hours. Augmented Dickey-Fuller test <span style='color:#374151'>gave
+us </span>p=0.48<span style='color:#374151'>. Therefore, based on the </span>Augmented
+Dickey-Fuller test<span style='color:#374151'>, the Bitcoin time series appears
+to be non-stationary around a deterministic trend for 8000 hours.<o:p></o:p></span></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;color:#374151'>However, it's essential to note that
+different statistical tests may yield different results, and the choice of
+which test to use can depend on various factors stationary around a
+deterministic trend.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>LSTM model was testing against random prices. I use
+Monte Carlo methods for random walk. This method is used for option pricing. I
+used Monte-Carlo with standard deviation (volatility) of sample to model future
+<span class=GramE>prices</span><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>Hypothesis for testing was following: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span class=GramE><span style='font-size:12.0pt;line-height:
+107%;font-family:"Times New Roman",serif'>LTSM(</span></span><span
+style='font-size:12.0pt;line-height:107%;font-family:"Times New Roman",serif'>no
+attention mechanism) follows Random Walk<span style='mso-spacerun:yes'> 
+</span>p-value=0.9x10<sup>-22</sup>&lt;0.05 <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>Null hypothesis rejected.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>LTSM (no attention mechanism) outperforms Arima model
+prices p-value=0.5x10<sup>-6<o:p></o:p></sup></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>Null hypothesis <span class=GramE>rejected</span><o:p></o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=351 valign=top style='width:263.55pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+  0in;text-align:justify;line-height:normal'><b><span style='font-size:12.0pt;
+  font-family:"Times New Roman",serif;color:black;font-style:normal'>Hypothesis<o:p></o:p></span></b></h4>
+  </td>
+  <td width=72 valign=top style='width:53.95pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+  0in;text-align:justify;line-height:normal'><b><span style='font-size:12.0pt;
+  font-family:"Times New Roman",serif;color:black;font-style:normal'>p-value<o:p></o:p></span></b></h4>
+  </td>
+  <td width=200 valign=top style='width:150.0pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+  0in;text-align:justify;line-height:normal'><b><span style='font-size:12.0pt;
+  font-family:"Times New Roman",serif;color:black;font-style:normal'>H<o:p></o:p></span></b></h4>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=351 valign=top style='width:263.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><i><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>LTSM (no
+  attention <span class=GramE>mechanism)<span style='mso-spacerun:yes'> 
+  </span>prices</span><span style='mso-spacerun:yes'>  </span>Random Walk
+  prices<o:p></o:p></span></i></p>
+  </td>
+  <td width=72 valign=top style='width:53.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+  0in;text-align:justify;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman",serif;color:windowtext'>0.9x10<sup>-22</sup><o:p></o:p></span></h4>
+  </td>
+  <td width=200 valign=top style='width:150.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+  0in;text-align:justify;line-height:normal'><b><span style='font-size:12.0pt;
+  font-family:"Times New Roman",serif;color:windowtext'>Rejected<o:p></o:p></span></b></h4>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;mso-yfti-lastrow:yes'>
+  <td width=351 valign=top style='width:263.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Arima model
+  predicted prices better than LTSM (no attention mechanism) prices<span
+  style='mso-spacerun:yes'>  </span><i><o:p></o:p></i></span></p>
+  </td>
+  <td width=72 valign=top style='width:53.95pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+  0in;text-align:justify;line-height:normal'><span style='font-size:12.0pt;
+  font-family:"Times New Roman",serif;color:windowtext'>0.5x10<sup>-6</sup><b><o:p></o:p></b></span></h4>
+  </td>
+  <td width=200 valign=top style='width:150.0pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <h4 style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;margin-left:
+  0in;text-align:justify;line-height:normal'><b><span style='font-size:12.0pt;
+  font-family:"Times New Roman",serif;color:windowtext'>Rejected<o:p></o:p></span></b></h4>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>4.1.2. Model without attention mechanism with
+epochs=10 leads to the best results.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 5.4pt 0in 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+  <td width=258 valign=top style='width:193.25pt;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Models<o:p></o:p></span></p>
+  </td>
+  <td width=85 valign=top style='width:63.65pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>MAPE<o:p></o:p></span></p>
+  </td>
+  <td width=182 valign=top style='width:136.85pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:
+  solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>MSE<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1'>
+  <td width=258 valign=top style='width:193.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>Model (<span
+  class=SpellE>Bahdanau</span> attention)<o:p></o:p></span></p>
+  </td>
+  <td width=85 valign=top style='width:63.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#212121;
+  background:white'>0.9912</span><span style='font-size:12.0pt;font-family:
+  "Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=182 valign=top style='width:136.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#212121;
+  background:white'>0.035</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2'>
+  <td width=258 valign=top style='width:193.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  class=GramE><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Model(</span></span><span
+  class=SpellE><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Bahdanau</span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'> attention
+  sigmoid)<o:p></o:p></span></p>
+  </td>
+  <td width=85 valign=top style='width:63.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>infinity<o:p></o:p></span></p>
+  </td>
+  <td width=182 valign=top style='width:136.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>infinity<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;mso-yfti-lastrow:yes'>
+  <td width=258 valign=top style='width:193.25pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  class=GramE><span style='font-size:12.0pt;font-family:"Times New Roman",serif'>Model(</span></span><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif'>without
+  attention)<o:p></o:p></span></p>
+  </td>
+  <td width=85 valign=top style='width:63.65pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#212121;
+  background:white'>0.3867</span><span style='font-size:12.0pt;font-family:
+  "Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+  <td width=182 valign=top style='width:136.85pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;
+  mso-border-alt:solid windowtext .5pt;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+  style='font-size:12.0pt;font-family:"Times New Roman",serif;color:#212121;
+  background:white'>0.007</span><span style='font-size:12.0pt;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_1"
+ o:spid="_x0000_i1025" type="#_x0000_t75" alt="A graph with blue and orange lines&#10;&#10;Description automatically generated"
+ style='width:493.5pt;height:131pt;visibility:visible;mso-wrap-style:square'>
+ <v:imagedata src="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/image006.png"
+  o:title="A graph with blue and orange lines&#10;&#10;Description automatically generated"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=658 height=175
+src="High%20frequency%20bitcoin%20price%20forecasting%20with%20%20Bahdanau%20attention%20%20mechanism%20and%20modified%20Bahdanau%20attention%20mechanism%20inside%20LSTM%20mdl%20(1)_files/image007.gif"
+alt="A graph with blue and orange lines&#10;&#10;Description automatically generated"
+v:shapes="Picture_x0020_1"><![endif]></span><span style='font-size:12.0pt;
+line-height:107%;font-family:"Times New Roman",serif'><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Figure 4. Prices of bitcoin with future
+price prediction<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>4.1.3. Optimal period for forecast.<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>We used a 50-period horizon in our calculations for
+predicting Bitcoin prices. This choice is highly constrained.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>I employed Particle Swarm Optimization to determine
+the optimal period for enhancing the LSTM model's performance.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>The optimal value obtained was 51, which is close to
+my current value. However, for periods ranging from 55 to 100, the optimal
+period is 72. This suggests that we can utilize different periods and combine
+the predictions for better results.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>Conclusion:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>Bitcoin prices are normally distributed, allowing us
+to use them as financial assets. Exchanges can effectively price options on
+bitcoins and Bitcoin ETFs. Bitcoin prices exhibit stationarity for several
+hours, and they are autocorrelated. This explains why an LSTM model is possible,
+or any directional model for that matter.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>The shapes of prices predicted by LSTM, LSTM with
+attention, and ARIMA are approximately similar. This leads us to believe that
+Bitcoin can be hold for the medium term (1-3 months) with positive return.
+Prices can be predicted by the LSTM model with a mean squared error (MSE)
+around <span style='color:#212121;background:white'>0.007</span>.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>Despite the recent popularity of attention mechanisms,
+an LSTM without attention mechanism performed better in my environment.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>The forecasted period for Bitcoin has been optimized
+using the Particle Swarm Optimization algorithm. The optimal value for the
+forecasted period is 51, which is close to my current value.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:12.0pt;line-height:107%;font-family:
+"Times New Roman",serif'>My general observation is that Bitcoin is a new
+financial instrument, made possible by sophisticated technology. Therefore, we
+need sophisticated technology to price, analyze, and manage risk associated
+with cryptocurrencies.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'>References.<o:p></o:p></span></b></p>
+
+<p class=html-x style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-align:justify;text-indent:-.25in;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-list:Ignore'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>https://www.kaggle.com/competitions/g-research-crypto-forecasting?rvi=1</p>
+
+<p class=html-x style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-align:justify;text-indent:-.25in;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-list:Ignore'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Bulí&#345;,
+A. Income inequality: Does inflation matter?&nbsp;<span class=html-italic><i>IMF
+Staff. Pap.</i></span>&nbsp;<b>2001</b>,&nbsp;<span class=html-italic><i>48</i></span>,
+139–159. [<a
+href="https://scholar.google.com/scholar_lookup?title=Income+inequality:+Does+inflation+matter?&amp;author=Bul%C3%AD%C5%99,+A.&amp;publication_year=2001&amp;journal=IMF+Staff.+Pap.&amp;volume=48&amp;pages=139%E2%80%93159"
+target="_blank"><b><span style='color:#4F5671'>Google Scholar</span></b></a>]</p>
+
+<p class=html-xx style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-align:justify;text-indent:-22.8pt;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-list:Ignore'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Hitam,
+N.A.; Ismail, A.R.; Samsudin, R.; Alkhammash, E.H. The Effect of Kernel
+Functions on Cryptocurrency Prediction Using Support Vector Machines. In
+Proceedings of the International Conference of Reliable Information and
+Communication Technology; Springer: Cham, Switzerland, 2022; pp. 319–332. [<a
+href="https://scholar.google.com/scholar_lookup?title=The+Effect+of+Kernel+Functions+on+Cryptocurrency+Prediction+Using+Support+Vector+Machines&amp;conference=Proceedings+of+the+International+Conference+of+Reliable+Information+and+Communication+Technology&amp;author=Hitam,+N.A.&amp;author=Ismail,+A.R.&amp;author=Samsudin,+R.&amp;author=Alkhammash,+E.H.&amp;publication_year=2022&amp;pages=319%E2%80%93332"
+target="_blank"><b><span style='color:#4F5671'>Google Scholar</span></b></a>]</p>
+
+<p class=html-xx style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-align:justify;text-indent:-22.8pt;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-list:Ignore'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Andrianto,
+Y.; Diputra, Y. The effect of cryptocurrency on investment portfolio
+effectiveness.&nbsp;<span class=html-italic><i>J. Financ. Account.</i></span>&nbsp;<b>2017</b>,&nbsp;<span
+class=html-italic><i>5</i></span>, 229–238. [<a
+href="https://scholar.google.com/scholar_lookup?title=The+effect+of+cryptocurrency+on+investment+portfolio+effectiveness&amp;author=Andrianto,+Y.&amp;author=Diputra,+Y.&amp;publication_year=2017&amp;journal=J.+Financ.+Account.&amp;volume=5&amp;pages=229%E2%80%93238&amp;doi=10.11648/j.jfa.20170506.14"
+target="_blank"><b><span style='color:#4F5671'>Google Scholar</span></b></a>] [<a
+href="https://doi.org/10.11648/j.jfa.20170506.14" target="_blank"><b><span
+style='color:#4F5671'>CrossRef</span></b></a>][<a
+href="http://article.sciencepublishinggroup.com/pdf/10.11648.j.jfa.20170506.14.pdf"
+target="_blank"><b><span style='color:#4F5671'>Green Version</span></b></a>]</p>
+
+<p class=html-xx style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-align:justify;text-indent:-.25in;mso-list:l0 level1 lfo1;
+tab-stops:list .5in'><![if !supportLists]><span style='mso-list:Ignore'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span><![endif]>Wu,
+C.H.; Lu, C.C.; Ma, Y.F.; Lu, R.S. A new forecasting framework for bitcoin
+price with LSTM. In Proceedings of the 2018 IEEE International Conference on
+Data Mining Workshops (ICDMW), Singapore, 17–20 November 2018; pp. 168–175. [<a
+href="https://scholar.google.com/scholar_lookup?title=A+new+forecasting+framework+for+bitcoin+price+with+LSTM&amp;conference=Proceedings+of+the+2018+IEEE+International+Conference+on+Data+Mining+Workshops+(ICDMW)&amp;author=Wu,+C.H.&amp;author=Lu,+C.C.&amp;author=Ma,+Y.F.&amp;author=Lu,+R.S.&amp;publication_year=2018&amp;pages=168%E2%80%93175"
+target="_blank"><b><span style='color:#4F5671'>Google Scholar</span></b></a>]</p>
+
+<p class=html-xx style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+margin-left:.5in;text-align:justify'><span style='font-size:11.0pt;font-family:
+"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:
+minor-latin;mso-bidi-theme-font:minor-latin'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoListParagraph><span style='font-size:12.0pt;line-height:107%;
+font-family:"Times New Roman",serif'><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+</body>
+
+</html>
